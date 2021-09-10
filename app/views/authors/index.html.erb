@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Authors</h1>
+<h1>Welcome to the To Do list app</h1>
 
 <table>
   <thead>
@@ -13,10 +13,7 @@
   <tbody>
     <% @authors.each do |author| %>
       <tr>
-        <td><%= author.name %></td>
-        <td><%= link_to 'Show', author %></td>
-        <td><%= link_to 'Edit', edit_author_path(author) %></td>
-        <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to author.name, author %></td>
       </tr>
     <% end %>
   </tbody>
