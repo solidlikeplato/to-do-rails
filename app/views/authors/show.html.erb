@@ -1,9 +1,13 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Name:</strong>
+  <strong>To Do List for </strong>
   <%= @author.name %>
 </p>
 
-<%= link_to 'Edit', edit_author_path(@author) %> |
+<div id="todo_items_wrapper">
+ <%= render @author.todo_items %>
+ <div id="form">
+  <%= render "todo_items/form" %>
+ </div>
+</div>
+
 <%= link_to 'Back', authors_path %>

@@ -1,0 +1,5 @@
+<%= form_for([@author, @author.todo_items.build]) do |f| %>
+  <%= f.text_field :title, placeholder: "New todo title" %>
+  <%= f.text_field :description, placeholder: "New todo description" %>
+  <%= f.submit %>
+<% end %>
